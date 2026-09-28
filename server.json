@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "cn.tutulife/aijiayao",
+  "title": "爱佳肴 Love Life",
+  "description": "Open restaurant data for AI agents in China: search, publish, fact-check. Free, no paid ranking.",
+  "version": "1.4.0",
+  "websiteUrl": "https://tutulife.cn/llms.txt",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://tutulife.cn/mcp"
+    }
+  ]
+}
