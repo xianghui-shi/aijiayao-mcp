@@ -3,7 +3,7 @@
   "name": "cn.tutulife/aijiayao",
   "title": "爱佳肴 Love Life",
   "description": "Open restaurant data for AI agents in China: search, publish, fact-check. Free, no paid ranking.",
-  "version": "1.4.0",
+  "version": "1.6.0",
   "websiteUrl": "https://tutulife.cn/llms.txt",
   "remotes": [
     {
