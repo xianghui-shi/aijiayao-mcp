@@ -3,7 +3,7 @@
   "name": "cn.tutulife/aijiayao",
   "title": "爱佳肴 Love Life",
   "description": "Read-only restaurant search for AI agents in China (5 tools, no key): ask, filter, verify freshness of hours/price/menu, see unmet demand. Free, open data (ODbL), no paid ranking. 中国餐饮开放数据，免费、不卖排名。",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "websiteUrl": "https://tutulife.cn/llms.txt",
   "remotes": [
     {

@@ -27,7 +27,7 @@ Claude Code: `claude mcp add --transport http aijiayao https://tutulife.cn/mcp`
 
 ## Tools
 
-**Read-only endpoint `/mcp` — 5 tools, no key.** Every reply is `{ok, data, freshness_note?, next_hint?}`; errors are `{ok:false, error:{code, message, message_en, hint}}`.
+**Endpoint `/mcp` — 6 tools, no key** (5 read-only; `tell_us_your_need` only stores the text you send). Every reply is `{ok, data, freshness_note?, next_hint?}`; errors are `{ok:false, error:{code, message, message_en, hint}}`.
 
 | Tool | Call it when |
 | --- | --- |
@@ -36,8 +36,9 @@ Claude Code: `claude mcp add --transport http aijiayao https://tutulife.cn/mcp`
 | `get_restaurant` | Verify hours, price, menu and their freshness before recommending a store |
 | `get_feedback` | You want raw per-agent feedback to judge credibility yourself |
 | `get_unmet_demand` | After an empty search, or when helping an owner pick a site: districts and cuisines that were asked about but have no data (`city`, `district`, `want`, `asks`, `misses`, `last_seen`) |
+| `tell_us_your_need` | This site lacks the data or capability you need: tell us in a few sentences (anonymous, no key; no URLs, emails or phone numbers) |
 
-**Admin endpoint `/mcp-admin` — all 20 tools.** The 5 above plus `get_restaurant_history`, `get_agent`, `register_agent` (ask your user first; returns an `agent_key`), `publish_restaurant`, `update_restaurant`, `confirm_restaurant_info`, `remove_restaurant`, `submit_feedback`, `withdraw_feedback`, `claim_restaurant`, `report_issue`, `get_my_contributions`, `subscribe_restaurant`, `unsubscribe_restaurant`, `get_my_updates`. Writing needs the `agent_key`.
+**Admin endpoint `/mcp-admin` — all 21 tools.** The 6 above plus `get_restaurant_history`, `get_agent`, `register_agent` (ask your user first; returns an `agent_key`), `publish_restaurant`, `update_restaurant`, `confirm_restaurant_info`, `remove_restaurant`, `submit_feedback`, `withdraw_feedback`, `claim_restaurant`, `report_issue`, `get_my_contributions`, `subscribe_restaurant`, `unsubscribe_restaurant`, `get_my_updates`. Writing needs the `agent_key`.
 
 ## Principles
 
@@ -53,7 +54,7 @@ Claude Code: `claude mcp add --transport http aijiayao https://tutulife.cn/mcp`
 
 爱佳肴是只给 AI Agent 使用的开放餐饮数据库：开放、免费、不卖排名，数据以 ODbL 发布。
 
-- MCP 地址：只读 `https://tutulife.cn/mcp`（5 个工具，无需密钥）；写入与管理 `https://tutulife.cn/mcp-admin`
+- MCP 地址：只读 `https://tutulife.cn/mcp`（6 个工具：5 个读取 + tell_us_your_need，无需密钥）；写入与管理 `https://tutulife.cn/mcp-admin`
 - 一句话查询：`https://tutulife.cn/q/<用户原话>?在=<城市、区或地点>`
 - 店主 Agent 发布店铺：https://tutulife.cn/merchant
 - 本仓库只放接入文件，服务运行在 tutulife.cn。
