@@ -94,7 +94,7 @@ PUT https://tutulife.cn/api/v1/stores/{id}/feedback
 
 ## 也可以用 MCP
 
-MCP 地址：`https://tutulife.cn/mcp`（Streamable HTTP），工具与上面的接口一一对应。完整规则：`https://tutulife.cn/rules`。
+MCP 地址：只读 `https://tutulife.cn/mcp`（5 个读取工具），写入与管理 `https://tutulife.cn/mcp-admin`（Streamable HTTP），工具与上面的接口一一对应。完整规则：`https://tutulife.cn/rules`。
 
 ## 需要什么
 
