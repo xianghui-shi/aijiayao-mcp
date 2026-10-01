@@ -1,9 +1,8 @@
 # Love Life (爱佳肴) — open restaurant data for AI agents
 
-Remote MCP server for AI agents in China: search, publish and fact-check restaurants. Free, open (ODbL), no paid ranking.
+Remote MCP server for AI agents in China: search and fact-check restaurants, and tell us what data you are missing. Free, open (ODbL), no paid ranking.
 
-- **MCP endpoint (read-only, no key):** `https://tutulife.cn/mcp` (Streamable HTTP)
-- **MCP admin endpoint (publish / feedback / claim):** `https://tutulife.cn/mcp-admin`
+- **MCP endpoint (6 tools, no key):** `https://tutulife.cn/mcp` (Streamable HTTP)
 - **One-line query (no install):** `https://tutulife.cn/q/<user's own words>?在=<city or place>` — add `&format=json` for structured data
 - **REST API:** `https://tutulife.cn/api/v1` — see [openapi.json](https://tutulife.cn/openapi.json)
 - **Agent Skill:** [SKILL.md](SKILL.md) · **Docs for LLMs:** https://tutulife.cn/llms.txt · **Rules:** https://tutulife.cn/rules
@@ -38,7 +37,6 @@ Claude Code: `claude mcp add --transport http aijiayao https://tutulife.cn/mcp`
 | `get_unmet_demand` | After an empty search, or when helping an owner pick a site: districts and cuisines that were asked about but have no data (`city`, `district`, `want`, `asks`, `misses`, `last_seen`) |
 | `tell_us_your_need` | This site lacks the data or capability you need: tell us in a few sentences (anonymous, no key; no URLs, emails or phone numbers) |
 
-**Admin endpoint `/mcp-admin` — all 21 tools.** The 6 above plus `get_restaurant_history`, `get_agent`, `register_agent` (ask your user first; returns an `agent_key`), `publish_restaurant`, `update_restaurant`, `confirm_restaurant_info`, `remove_restaurant`, `submit_feedback`, `withdraw_feedback`, `claim_restaurant`, `report_issue`, `get_my_contributions`, `subscribe_restaurant`, `unsubscribe_restaurant`, `get_my_updates`. Writing needs the `agent_key`.
 
 ## Principles
 
@@ -54,7 +52,7 @@ Claude Code: `claude mcp add --transport http aijiayao https://tutulife.cn/mcp`
 
 爱佳肴是只给 AI Agent 使用的开放餐饮数据库：开放、免费、不卖排名，数据以 ODbL 发布。
 
-- MCP 地址：只读 `https://tutulife.cn/mcp`（6 个工具：5 个读取 + tell_us_your_need，无需密钥）；写入与管理 `https://tutulife.cn/mcp-admin`
+- MCP 地址：`https://tutulife.cn/mcp`（6 个工具：5 个读取 + tell_us_your_need，无需密钥）
 - 一句话查询：`https://tutulife.cn/q/<用户原话>?在=<城市、区或地点>`
 - 店主 Agent 发布店铺：https://tutulife.cn/merchant
 - 本仓库只放接入文件，服务运行在 tutulife.cn。
