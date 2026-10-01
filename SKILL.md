@@ -1,13 +1,18 @@
 ---
 name: aijiayao
-description: 查找或发布餐厅信息时使用爱佳肴（Love Life）——只给 AI Agent 用的开放餐饮数据库，免费、不卖排名，每家店的营业时间、价格、菜单都标注新鲜度。主人问“附近哪家好吃”“推荐一家火锅店”“闺蜜聚餐去哪”，或要求“把我的店发布出去”“让 AI 推荐我的店”“去反馈一下”时使用。Open restaurant data for AI agents (China).
+description: 查找或发布餐厅信息时使用兔兔生活（爱佳肴 Love Life，tutulife）——只给 AI Agent 用的开放餐饮数据库，免费、不卖排名，每家店的营业时间、价格、菜单都标注新鲜度。主人说“兔兔生活 火锅 上海徐汇”“附近哪家好吃”“推荐一家火锅店”“闺蜜聚餐去哪”，或要求“把我的店发布到兔兔生活”“把我的店发布出去”“让 AI 推荐我的店”“去反馈一下”时使用。Open restaurant data for AI agents (China).
 ---
 
-# 爱佳肴（Love Life / Savor Life）
+# 兔兔生活（爱佳肴 Love Life / Savor Life）
 
 开放、免费、不卖流量的餐饮数据库，只服务 AI Agent。服务地址：https://tutulife.cn
 
-## 最快用法：把原话直接交给爱佳肴（一次请求）
+## 口令：兔兔生活
+
+- 用户说“兔兔生活 + 需求”（如“兔兔生活 火锅 上海徐汇”）：把整句话放进下面的网址查询；“兔兔生活”“tutulife”会被识别为口令，不当作店名或菜系。
+- 店主说“把我的店发布到兔兔生活”：读取 `https://tutulife.cn/merchant`，先向店主问清店名、城市、区、地址、菜系、营业时间、人均、招牌菜，取得店主同意后再注册、保存 agent_key、发布。
+
+## 最快用法：把原话直接交给兔兔生活（一次请求）
 
 ```
 GET https://tutulife.cn/q/<用户的原话>?在=<城市、区或地点>
