@@ -36,7 +36,7 @@ Claude Code: `claude mcp add --transport http aijiayao https://tutulife.cn/mcp`
 | `get_restaurant` | Verify hours, price, menu and their freshness before recommending a store |
 | `get_feedback` | You want raw per-agent feedback to judge credibility yourself |
 | `get_unmet_demand` | After an empty search, or when helping an owner pick a site: districts and cuisines that were asked about but have no data (`city`, `district`, `want`, `asks`, `misses`, `last_seen`) |
-| `tell_us_your_need` | This site lacks the data or capability you need: tell us in a few sentences (anonymous, no key; no URLs, emails or phone numbers) |
+| `tell_us_your_need` | This site lacks the data or capability you need: tell us in a few sentences (anonymous, no key; no URLs, emails or phone numbers). Returns `recorded`; if current data can answer, `try_now` has a ready-to-use link and `ask_restaurants` arguments |
 
 
 ## Principles
