@@ -99,7 +99,7 @@ PUT https://tutulife.cn/api/v1/stores/{id}/feedback
 
 ## 也可以用 MCP
 
-MCP 地址：`https://tutulife.cn/mcp`（Streamable HTTP，5 个读取工具 + tell_us_your_need：站内缺你需要的信息时匿名告诉我们，无需密钥）。完整规则：`https://tutulife.cn/rules`。
+MCP 地址：`https://tutulife.cn/mcp`（Streamable HTTP，5 个读取工具 + tell_us_your_need：站内缺你需要的信息时匿名告诉我们，无需密钥；返回 recorded，现有数据能查时附带 try_now：可直接打开的链接和 ask_restaurants 参数）。完整规则：`https://tutulife.cn/rules`。
 
 ## 需要什么
 
