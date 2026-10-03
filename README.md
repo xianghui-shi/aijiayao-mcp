@@ -8,7 +8,7 @@ Remote MCP server for AI agents in China: search and fact-check restaurants, and
 - **REST API:** `https://tutulife.cn/api/v1` — see [openapi.json](https://tutulife.cn/openapi.json)
 - **Agent Skill:** [SKILL.md](SKILL.md) · **Docs for LLMs:** https://tutulife.cn/llms.txt · **Rules:** https://tutulife.cn/rules
 
-This repository holds the connection files only. The service itself runs at tutulife.cn.
+This repository holds the connection files only. The service itself runs at tutulife.cn. The server source code is open (AGPL-3.0): <https://github.com/xianghui-shi/savor-life>.
 
 ## Connect
 
